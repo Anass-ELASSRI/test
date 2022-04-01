@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #dee4ea;
+}
+
+#nav {
+  padding-top: 40px;
+}
+#nav .logo {
+  position: relative;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 15px;
+}
+#nav .logo .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #003b83;
+  display: block;
+  border-radius: 50%;
+}
+#nav .logo .dot:first-child {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#nav .logo .dot:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#nav .logo .dot:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  transform: translateX(-100%);
+}
+#nav .logo-text p {
+  text-align: center;
+  font-weight: 169;
+  text-transform: capitalize;
+  color: #003b83;
+  font-size: 22px;
+}
+
+
+#content {
+  margin-top: 60px;
+}
+#content .content-grid {
+  display: grid;
+  grid-template-columns: 40% 30%;
+  justify-content: space-around;
+}
+#content .content-grid .tabs li {
+  border-top: 1px solid #c5d0db;
+  padding: 10px 5px;
+  list-style: none;
+  cursor: pointer;
+}
+#content .content-grid .tabs li:last-child{
+  border-bottom: 1px solid #c5d0db;
+}
+#content .content-grid .tabs li:hover {
+  background-color: #c5d0db;
+}
+#content .content-grid .tabs li .tab-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#content .content-grid .tabs li .tab-title p {
+  color: #0077c0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+#content .content-grid .tabs li .tab-title p .circle {
+  background-color: #0077c0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+  visibility: hidden;
+}
+#content .content-grid .tabs li.active .tab-title p .circle {
+  visibility: visible;
+}
+#content .content-grid .tabs li.active .direction{
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+#content .content-grid .tabs li .tab-content {
+  display: none;
+  color: #003b83;
+}
+#content .content-grid .tabs li.active .tab-content {
+  display: block;
+  padding: 20px 0;
+}
+
+#content .content-grid .image-side img {
+  width: 70%;
+  float: right;
+}
+
+
+
+.arrow {
+  border: solid #0077c0;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.direction {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
